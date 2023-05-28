@@ -1,0 +1,34 @@
+﻿<Window x:Class="CarShop_RoxanaLungu.Views.HomeView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CarShop_RoxanaLungu.Views"
+        mc:Ignorable="d"
+        Title="HomeView" Height="450" Width="800">
+    <Grid>
+        <Label Content="Car Shop" FontSize="50" Foreground="Brown"  VerticalAlignment="Top" HorizontalAlignment="Center"/>
+        <Label Content="Lungu Roxana Mihaela" FontSize="15" Foreground="Gray"   HorizontalAlignment="Center" Margin="0,77,0,-77"/>
+
+        <Button Content="Clients" HorizontalAlignment="Left" Margin="75,0,0,0" VerticalAlignment="Center" Height="180" Width="285" FontSize="40" Click="GetClients_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="130">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Content="Cars" HorizontalAlignment="Left" Margin="435,0,0,0" VerticalAlignment="Center" Height="180" Width="285" FontSize="40" Click="GetCars_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="130">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Label Content="Total cars: " FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="382,329,0,0" />
+        <Label Content="{Binding CarCount}" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="555,329,0,0" RenderTransformOrigin="0.5,-1.996" />
+    </Grid>
+</Window>
